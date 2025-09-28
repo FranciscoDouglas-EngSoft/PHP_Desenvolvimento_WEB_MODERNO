@@ -4,10 +4,10 @@
 
 //Existe 2 formas de definir constantes
 //1 - Usando a função define(nome, valor, case_insensitive)
-define("NOME", "Francisco", true); //true torna a constante case insensitive
+define("NOME", "FRANCISCO", true); //true torna a constante case insensitive
 define("IDADE", 25);
-print NOME . "<br>";
-print IDADE . "<br>"; //funciona por causa do true
+echo NOME . "<br>";
+echo IDADE . "<br>"; //funciona por causa do true
 
 //2 - Usando a palavra reservada const
 const ALTURA = 1.75;
