@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Semântica no HTML5</title>
+    <meta name="description" content="Página demonstrando o uso de elementos semânticos do HTML5">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; background: #f9f9f9; }
+        header, nav, main, aside, footer { margin-bottom: 1.5em; padding: 1em; background: #fff; border-radius: 5px; }
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { display: inline; margin-right: 1em; }
+        article { margin-bottom: 1em; }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho principal da página -->
+    <header>
+        <h1>Semântica no HTML5</h1>
+        <p>Exemplo prático dos principais elementos semânticos.</p>
+    </header>
+
+    <!-- Navegação principal do site -->
+    <nav>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#artigos">Artigos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Seção de introdução -->
+        <section id="introducao">
+            <h2>O que é Semântica?</h2>
+            <p>
+                Semântica no HTML5 refere-se ao uso de elementos que descrevem claramente seu significado tanto para o navegador quanto para o desenvolvedor.
+                Isso melhora a acessibilidade, SEO e organização do código.
+            </p>
+        </section>
+
+        <!-- Seção de artigos -->
+        <section id="artigos">
+            <h2>Artigos Recentes</h2>
+            <!-- Cada artigo é representado pelo elemento <article> -->
+            <article>
+                <h3>Por que usar elementos semânticos?</h3>
+                <p>
+                    Elementos como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> e <code>&lt;footer&gt;</code> ajudam a estruturar o conteúdo de forma lógica.
+                </p>
+                <footer>
+                    <small>Publicado em 10/06/2024 por João Silva</small>
+                </footer>
+            </article>
+            <article>
+                <h3>Benefícios para SEO</h3>
+                <p>
+                    Motores de busca entendem melhor o conteúdo da página, melhorando o ranqueamento nos resultados de pesquisa.
+                </p>
+                <footer>
+                    <small>Publicado em 09/06/2024 por Maria Souza</small>
+                </footer>
+            </article>
+        </section>
+    </main>
+
+    <!-- Barra lateral com informações adicionais -->
+    <aside>
+        <h2>Curiosidade</h2>
+        <p>
+            O uso correto de elementos semânticos facilita a navegação por leitores de tela, tornando seu site mais acessível.
+        </p>
+    </aside>
+
+    <!-- Rodapé da página -->
+    <footer id="contato">
+        <p>Contato: exemplo@email.com</p>
+        <p>&copy; 2024 - Exemplo de Semântica HTML5</p>
+    </footer>
+</body>
+</html>

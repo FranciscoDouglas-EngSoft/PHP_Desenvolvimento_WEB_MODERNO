@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float no CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .exemplo {
+            border: 2px solid #ccc;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .caixa {
+            width: 100px;
+            height: 100px;
+            background: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px 0;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .imagem {
+            width: 80px;
+            height: 80px;
+            background: #e74c3c;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+            margin: 0 10px 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Float no CSS</h1>
+
+    <h2>O que é?</h2>
+    <p><strong>Float</strong> faz um elemento "flutuar" para a esquerda ou direita, permitindo que outros elementos contornem ao redor dele.</p>
+
+    <h2>Valores:</h2>
+    <ul>
+        <li><strong>left</strong> - Flutua para a esquerda</li>
+        <li><strong>right</strong> - Flutua para a direita</li>
+        <li><strong>none</strong> - Sem float (padrão)</li>
+    </ul>
+
+    <h2>Exemplo - Float Left:</h2>
+    <div class="exemplo">
+        <div class="caixa float-left">Float Left</div>
+        <p>Este texto contorna a caixa azul que está flutuando à esquerda. Veja como o texto se ajusta ao redor da caixa.</p>
+    </div>
+
+    <div class="clear"></div>
+
+    <h2>Exemplo - Float Right:</h2>
+    <div class="exemplo">
+        <div class="caixa float-right">Float Right</div>
+        <p>Agora a caixa flutua à direita e o texto se ajusta contornando ela do lado esquerdo.</p>
+    </div>
+
+    <div class="clear"></div>
+
+    <h2>Uso comum - Imagem com texto:</h2>
+    <div class="exemplo">
+        <div class="imagem float-left">IMG</div>
+        <p>Este é um uso muito comum do float: colocar uma imagem flutuando à esquerda e o texto contornando ela, como em jornais e revistas.</p>
+        <p>O texto continua fluindo naturalmente ao redor da imagem.</p>
+    </div>
+
+    <div class="clear"></div>
+
+    <h2>Clear:</h2>
+    <p>Use <code>clear: both</code> para parar o efeito do float e fazer o próximo elemento aparecer abaixo.</p>
+
+    <h2>Importante:</h2>
+    <p>⚠️ <strong>Float é antigo!</strong> Hoje usamos <strong>Flexbox</strong> ou <strong>Grid</strong> para layouts. Float é usado principalmente para texto contornar imagens.</p>
+
+</body>
+</html>

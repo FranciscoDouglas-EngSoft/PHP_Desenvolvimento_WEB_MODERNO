@@ -1,0 +1,17 @@
+/* Seleciona todos os parágrafos e define cor e tamanho da fonte */
+p {
+    color: blue;           /* propriedade: valor */
+    font-size: 18px;
+}
+
+/* Seleciona elemento com id "destaque" */
+#destaque {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Seleciona elementos com classe "importante" */
+.importante {
+    border: 2px solid red;
+    padding: 10px;
+}

@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores no CSS3 - Guia Completo</title>
+    <style>
+        /* ========================================
+           ESTILOS GERAIS DA PÁGINA
+        ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ========================================
+           CABEÇALHO
+        ======================================== */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* ========================================
+           SEÇÕES
+        ======================================== */
+        section {
+            background: rgba(255, 255, 255, 0.95);
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.3rem;
+            margin: 20px 0 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* ========================================
+           EXEMPLOS DE CORES
+        ======================================== */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .color-box {
+            height: 100px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .color-info {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* ========================================
+           CORES NOMEADAS
+        ======================================== */
+        .red-box { background-color: red; }
+        .blue-box { background-color: blue; }
+        .green-box { background-color: green; }
+        .yellow-box { background-color: yellow; color: #333; }
+        .purple-box { background-color: purple; }
+        .orange-box { background-color: orange; color: #333; }
+        .pink-box { background-color: pink; color: #333; }
+        .brown-box { background-color: brown; }
+        .gray-box { background-color: gray; }
+        .navy-box { background-color: navy; }
+        .lime-box { background-color: lime; color: #333; }
+        .cyan-box { background-color: cyan; color: #333; }
+
+        /* ========================================
+           CORES HEXADECIMAIS
+        ======================================== */
+        .hex-1 { background-color: #FF0000; }
+        .hex-2 { background-color: #00FF00; color: #333; }
+        .hex-3 { background-color: #0000FF; }
+        .hex-4 { background-color: #FFFF00; color: #333; }
+        .hex-5 { background-color: #FF00FF; }
+        .hex-6 { background-color: #00FFFF; color: #333; }
+        .hex-7 { background-color: #333333; }
+        .hex-8 { background-color: #666666; }
+        .hex-9 { background-color: #999999; color: #333; }
+        .hex-10 { background-color: #CCCCCC; color: #333; }
+        .hex-11 { background-color: #FF6B6B; }
+        .hex-12 { background-color: #4ECDC4; color: #333; }
+
+        /* ========================================
+           CORES RGB E RGBA
+        ======================================== */
+        .rgb-1 { background-color: rgb(255, 0, 0); }
+        .rgb-2 { background-color: rgb(0, 255, 0); color: #333; }
+        .rgb-3 { background-color: rgb(0, 0, 255); }
+        .rgb-4 { background-color: rgb(255, 165, 0); color: #333; }
+        .rgb-5 { background-color: rgb(128, 0, 128); }
+        .rgb-6 { background-color: rgb(255, 192, 203); color: #333; }
+        
+        .rgba-1 { background-color: rgba(255, 0, 0, 0.7); }
+        .rgba-2 { background-color: rgba(0, 255, 0, 0.7); color: #333; }
+        .rgba-3 { background-color: rgba(0, 0, 255, 0.7); }
+        .rgba-4 { background-color: rgba(255, 165, 0, 0.7); color: #333; }
+        .rgba-5 { background-color: rgba(128, 0, 128, 0.7); }
+        .rgba-6 { background-color: rgba(255, 192, 203, 0.7); color: #333; }
+
+        /* ========================================
+           CORES HSL E HSLA
+        ======================================== */
+        .hsl-1 { background-color: hsl(0, 100%, 50%); }
+        .hsl-2 { background-color: hsl(120, 100%, 50%); color: #333; }
+        .hsl-3 { background-color: hsl(240, 100%, 50%); }
+        .hsl-4 { background-color: hsl(60, 100%, 50%); color: #333; }
+        .hsl-5 { background-color: hsl(300, 100%, 50%); }
+        .hsl-6 { background-color: hsl(180, 100%, 50%); color: #333; }
+        .hsl-7 { background-color: hsl(30, 100%, 50%); color: #333; }
+        .hsl-8 { background-color: hsl(270, 100%, 50%); }
+
+        .hsla-1 { background-color: hsla(0, 100%, 50%, 0.7); }
+        .hsla-2 { background-color: hsla(120, 100%, 50%, 0.7); color: #333; }
+        .hsla-3 { background-color: hsla(240, 100%, 50%, 0.7); }
+        .hsla-4 { background-color: hsla(60, 100%, 50%, 0.7); color: #333; }
+
+        /* ========================================
+           GRADIENTES
+        ======================================== */
+        .gradient-linear-1 {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+        }
+
+        .gradient-linear-2 {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .gradient-linear-3 {
+            background: linear-gradient(to bottom, #ff9a9e, #fecfef);
+        }
+
+        .gradient-radial-1 {
+            background: radial-gradient(circle, #ff9a9e, #fecfef);
+        }
+
+        .gradient-radial-2 {
+            background: radial-gradient(ellipse, #667eea, #764ba2);
+        }
+
+        .gradient-complex {
+            background: linear-gradient(45deg, 
+                #ff0000 0%, 
+                #ff7700 20%, 
+                #ffff00 40%, 
+                #00ff00 60%, 
+                #0077ff 80%, 
+                #7700ff 100%
+            );
+        }
+
+        /* ========================================
+           CÓDIGO DE EXEMPLO
+        ======================================== */
+        .code-example {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-example::before {
+            content: "CSS";
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: #3498db;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+
+        /* ========================================
+           TABELA INFORMATIVA
+        ======================================== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background: rgba(52, 152, 219, 0.1);
+        }
+
+        /* ========================================
+           RESPONSIVIDADE
+        ======================================== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .color-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+            }
+
+            .color-box {
+                height: 80px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ========================================
+           EFEITOS ESPECIAIS
+        ======================================== */
+        .interactive-demo {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .color-picker-demo {
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .color-picker-demo:hover {
+            transform: scale(1.1);
+        }
+
+        /* Animação de loading para demonstrar cores dinâmicas */
+        @keyframes colorChange {
+            0% { background-color: red; }
+            16.66% { background-color: orange; }
+            33.33% { background-color: yellow; }
+            50% { background-color: green; }
+            66.66% { background-color: blue; }
+            83.33% { background-color: indigo; }
+            100% { background-color: violet; }
+        }
+
+        .animated-rainbow {
+            animation: colorChange 3s infinite;
+            height: 100px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilos adicionais para elementos específicos */
+        .gradient-complex-large {
+            height: 120px;
+        }
+
+        .list-style {
+            padding-left: 20px;
+        }
+
+        .list-style-with-margin {
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+
+        .conclusion-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- CABEÇALHO -->
+        <header>
+            <h1>🎨 Cores no CSS3</h1>
+            <p class="subtitle">Guia Completo e Interativo sobre Especificação de Cores</p>
+        </header>
+
+        <!-- INTRODUÇÃO -->
+        <section>
+            <h2>📖 Introdução às Cores no CSS</h2>
+            <p>
+                O CSS3 oferece múltiplas formas de especificar cores, cada uma com suas vantagens e casos de uso específicos. 
+                As cores são fundamentais no web design e podem ser definidas através de nomes, códigos hexadecimais, 
+                valores RGB/RGBA, HSL/HSLA e gradientes. Este guia apresenta exemplos práticos de cada método.
+            </p>
+            
+            <h3>💡 Por que entender cores é importante?</h3>
+            <p>
+                As cores influenciam a experiência do usuário, a acessibilidade e a estética do site. Dominar as diferentes 
+                formas de especificar cores permite maior controle sobre o design e facilita a manutenção do código CSS.
+            </p>
+        </section>
+
+        <!-- CORES NOMEADAS -->
+        <section>
+            <h2>🏷️ Cores Nomeadas (Named Colors)</h2>
+            <p>
+                O CSS possui 140 cores nomeadas predefinidas. São palavras-chave simples e intuitivas, ideais para 
+                prototipagem rápida e cores básicas. Exemplos incluem: red, blue, green, yellow, purple, etc.
+            </p>
+
+            <div class="code-example">
+/* Exemplos de cores nomeadas */
+.elemento {
+    color: red;           /* Texto vermelho */
+    background-color: blue;   /* Fundo azul */
+    border-color: green;  /* Borda verde */
+}</div>
+
+            <h3>🎯 Exemplos Práticos de Cores Nomeadas:</h3>
+            <div class="color-grid">
+                <div class="color-box red-box">Red</div>
+                <div class="color-box blue-box">Blue</div>
+                <div class="color-box green-box">Green</div>
+                <div class="color-box yellow-box">Yellow</div>
+                <div class="color-box purple-box">Purple</div>
+                <div class="color-box orange-box">Orange</div>
+                <div class="color-box pink-box">Pink</div>
+                <div class="color-box brown-box">Brown</div>
+                <div class="color-box gray-box">Gray</div>
+                <div class="color-box navy-box">Navy</div>
+                <div class="color-box lime-box">Lime</div>
+                <div class="color-box cyan-box">Cyan</div>
+            </div>
+
+            <div class="color-info">
+                <strong>Vantagens:</strong> Fácil de lembrar e escrever • <strong>Desvantagens:</strong> Limitado a 140 cores • Não oferece controle preciso sobre tons
+            </div>
+        </section>
+
+        <!-- CORES HEXADECIMAIS -->
+        <section>
+            <h2>🔢 Cores Hexadecimais (Hex Colors)</h2>
+            <p>
+                As cores hexadecimais usam notação de 6 dígitos (#RRGGBB) ou 3 dígitos (#RGB) em base 16. 
+                Cada par de dígitos representa a intensidade das cores vermelha, verde e azul (0-255 em decimal, 00-FF em hexadecimal).
+            </p>
+
+            <div class="code-example">
+/* Exemplos de cores hexadecimais */
+.elemento {
+    color: #FF0000;        /* Vermelho puro (255,0,0) */
+    background: #00FF00;   /* Verde puro (0,255,0) */
+    border-color: #0000FF; /* Azul puro (0,0,255) */
+}
+
+/* Notação abreviada (quando dígitos são iguais) */
+.elemento-abrev {
+    color: #F00;    /* Equivale a #FF0000 */
+    background: #0F0; /* Equivale a #00FF00 */
+    border: #00F;   /* Equivale a #0000FF */
+}</div>
+
+            <h3>🎯 Exemplos de Cores Hexadecimais:</h3>
+            <div class="color-grid">
+                <div class="color-box hex-1">#FF0000<br><small>Vermelho</small></div>
+                <div class="color-box hex-2">#00FF00<br><small>Verde</small></div>
+                <div class="color-box hex-3">#0000FF<br><small>Azul</small></div>
+                <div class="color-box hex-4">#FFFF00<br><small>Amarelo</small></div>
+                <div class="color-box hex-5">#FF00FF<br><small>Magenta</small></div>
+                <div class="color-box hex-6">#00FFFF<br><small>Ciano</small></div>
+                <div class="color-box hex-7">#333333<br><small>Cinza Escuro</small></div>
+                <div class="color-box hex-8">#666666<br><small>Cinza Médio</small></div>
+                <div class="color-box hex-9">#999999<br><small>Cinza Claro</small></div>
+                <div class="color-box hex-10">#CCCCCC<br><small>Cinza Muito Claro</small></div>
+                <div class="color-box hex-11">#FF6B6B<br><small>Coral</small></div>
+                <div class="color-box hex-12">#4ECDC4<br><small>Turquesa</small></div>
+            </div>
+
+            <div class="color-info">
+                <strong>Vantagens:</strong> Precisão total • Amplamente suportado • Compacto • <strong>Desvantagens:</strong> Não intuitivo • Difícil de ajustar mentalmente
+            </div>
+
+            <h3>📊 Tabela de Conversão Hexadecimal-Decimal:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hex</th>
+                        <th>Decimal</th>
+                        <th>Porcentagem</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>00</td><td>0</td><td>0%</td><td>Ausência total da cor</td></tr>
+                    <tr><td>33</td><td>51</td><td>20%</td><td>Muito baixa intensidade</td></tr>
+                    <tr><td>66</td><td>102</td><td>40%</td><td>Baixa intensidade</td></tr>
+                    <tr><td>99</td><td>153</td><td>60%</td><td>Intensidade média</td></tr>
+                    <tr><td>CC</td><td>204</td><td>80%</td><td>Alta intensidade</td></tr>
+                    <tr><td>FF</td><td>255</td><td>100%</td><td>Intensidade máxima</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- CORES RGB E RGBA -->
+        <section>
+            <h2>🔴 Cores RGB e RGBA</h2>
+            <p>
+                RGB (Red, Green, Blue) especifica cores através de valores de 0-255 para cada canal de cor. 
+                RGBA adiciona um canal alfa para transparência (0.0 = transparente, 1.0 = opaco).
+            </p>
+
+            <div class="code-example">
+/* Exemplos RGB */
+.elemento-rgb {
+    color: rgb(255, 0, 0);     /* Vermelho */
+    background: rgb(0, 255, 0); /* Verde */
+    border: rgb(0, 0, 255);    /* Azul */
+}
+
+/* Exemplos RGBA com transparência */
+.elemento-rgba {
+    background: rgba(255, 0, 0, 0.5);   /* Vermelho 50% transparente */
+    color: rgba(0, 0, 0, 0.8);          /* Preto 80% opaco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}</div>
+
+            <h3>🎯 Exemplos RGB (Cores Sólidas):</h3>
+            <div class="color-grid">
+                <div class="color-box rgb-1">rgb(255, 0, 0)<br><small>Vermelho</small></div>
+                <div class="color-box rgb-2">rgb(0, 255, 0)<br><small>Verde</small></div>
+                <div class="color-box rgb-3">rgb(0, 0, 255)<br><small>Azul</small></div>
+                <div class="color-box rgb-4">rgb(255, 165, 0)<br><small>Laranja</small></div>
+                <div class="color-box rgb-5">rgb(128, 0, 128)<br><small>Roxo</small></div>
+                <div class="color-box rgb-6">rgb(255, 192, 203)<br><small>Rosa</small></div>
+            </div>
+
+            <h3>🎯 Exemplos RGBA (Com Transparência):</h3>
+            <div class="color-grid">
+                <div class="color-box rgba-1">rgba(255, 0, 0, 0.7)<br><small>Vermelho 70%</small></div>
+                <div class="color-box rgba-2">rgba(0, 255, 0, 0.7)<br><small>Verde 70%</small></div>
+                <div class="color-box rgba-3">rgba(0, 0, 255, 0.7)<br><small>Azul 70%</small></div>
+                <div class="color-box rgba-4">rgba(255, 165, 0, 0.7)<br><small>Laranja 70%</small></div>
+                <div class="color-box rgba-5">rgba(128, 0, 128, 0.7)<br><small>Roxo 70%</small></div>
+                <div class="color-box rgba-6">rgba(255, 192, 203, 0.7)<br><small>Rosa 70%</small></div>
+            </div>
+
+            <div class="color-info">
+                <strong>Vantagens:</strong> Intuitivo • Controle de transparência (RGBA) • Fácil de ajustar • <strong>Desvantagens:</strong> Verboso • Não expressa relações de cor
+            </div>
+        </section>
+
+        <!-- CORES HSL E HSLA -->
+        <section>
+            <h2>🌈 Cores HSL e HSLA</h2>
+            <p>
+                HSL (Hue, Saturation, Lightness) é mais intuitivo para designers: Matiz (0-360°), Saturação (0-100%), 
+                Luminosidade (0-100%). HSLA adiciona transparência. Facilita criar paletas harmônicas e ajustar brilho/saturação.
+            </p>
+
+            <div class="code-example">
+/* Exemplos HSL */
+.elemento-hsl {
+    color: hsl(0, 100%, 50%);     /* Vermelho puro */
+    background: hsl(120, 100%, 50%); /* Verde puro */
+    border: hsl(240, 100%, 50%);  /* Azul puro */
+}
+
+/* Variações de uma mesma cor (matiz 240° - azul) */
+.azul-claro { color: hsl(240, 100%, 75%); }  /* Mais claro */
+.azul-escuro { color: hsl(240, 100%, 25%); } /* Mais escuro */
+.azul-dessaturado { color: hsl(240, 50%, 50%); } /* Menos saturado */
+
+/* HSLA com transparência */
+.overlay { background: hsla(0, 0%, 0%, 0.5); } /* Preto semi-transparente */</div>
+
+            <h3>🎨 Círculo de Matizes (Hue Wheel):</h3>
+            <div class="color-grid">
+                <div class="color-box hsl-1">hsl(0, 100%, 50%)<br><small>0° - Vermelho</small></div>
+                <div class="color-box hsl-4">hsl(60, 100%, 50%)<br><small>60° - Amarelo</small></div>
+                <div class="color-box hsl-2">hsl(120, 100%, 50%)<br><small>120° - Verde</small></div>
+                <div class="color-box hsl-6">hsl(180, 100%, 50%)<br><small>180° - Ciano</small></div>
+                <div class="color-box hsl-3">hsl(240, 100%, 50%)<br><small>240° - Azul</small></div>
+                <div class="color-box hsl-5">hsl(300, 100%, 50%)<br><small>300° - Magenta</small></div>
+                <div class="color-box hsl-7">hsl(30, 100%, 50%)<br><small>30° - Laranja</small></div>
+                <div class="color-box hsl-8">hsl(270, 100%, 50%)<br><small>270° - Violeta</small></div>
+            </div>
+
+            <h3>🎯 Exemplos HSLA (Com Transparência):</h3>
+            <div class="color-grid">
+                <div class="color-box hsla-1">hsla(0, 100%, 50%, 0.7)<br><small>Vermelho 70%</small></div>
+                <div class="color-box hsla-2">hsla(120, 100%, 50%, 0.7)<br><small>Verde 70%</small></div>
+                <div class="color-box hsla-3">hsla(240, 100%, 50%, 0.7)<br><small>Azul 70%</small></div>
+                <div class="color-box hsla-4">hsla(60, 100%, 50%, 0.7)<br><small>Amarelo 70%</small></div>
+            </div>
+
+            <div class="color-info">
+                <strong>Vantagens:</strong> Intuitivo para designers • Fácil criar variações • Controle de saturação/brilho • <strong>Desvantagens:</strong> Menos familiar para desenvolvedores
+            </div>
+
+            <h3>📊 Compreendendo os Valores HSL:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Propriedade</th>
+                        <th>Faixa</th>
+                        <th>Descrição</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hue (Matiz)</strong></td>
+                        <td>0° - 360°</td>
+                        <td>Posição no círculo cromático</td>
+                        <td>0°=Vermelho, 120°=Verde, 240°=Azul</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Saturation (Saturação)</strong></td>
+                        <td>0% - 100%</td>
+                        <td>Intensidade/pureza da cor</td>
+                        <td>0%=Cinza, 100%=Cor pura</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lightness (Luminosidade)</strong></td>
+                        <td>0% - 100%</td>
+                        <td>Claridade da cor</td>
+                        <td>0%=Preto, 50%=Normal, 100%=Branco</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alpha (Transparência)</strong></td>
+                        <td>0.0 - 1.0</td>
+                        <td>Opacidade da cor</td>
+                        <td>0.0=Transparente, 1.0=Opaco</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- GRADIENTES -->
+        <section>
+            <h2>🌅 Gradientes CSS3</h2>
+            <p>
+                Os gradientes permitem transições suaves entre duas ou mais cores. O CSS3 suporta gradientes lineares 
+                e radiais, oferecendo controle total sobre direção, posição e pontos de parada das cores.
+            </p>
+
+            <div class="code-example">
+/* Gradientes Lineares */
+.gradiente-horizontal {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.gradiente-diagonal {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.gradiente-vertical {
+    background: linear-gradient(to bottom, #ff9a9e, #fecfef);
+}
+
+/* Gradientes Radiais */
+.gradiente-circular {
+    background: radial-gradient(circle, #ff9a9e, #fecfef);
+}
+
+.gradiente-eliptico {
+    background: radial-gradient(ellipse, #667eea, #764ba2);
+}
+
+/* Gradiente Complexo (Múltiplas Cores) */
+.arco-iris {
+    background: linear-gradient(45deg, 
+        #ff0000 0%,   /* Vermelho */
+        #ff7700 20%,  /* Laranja */
+        #ffff00 40%,  /* Amarelo */
+        #00ff00 60%,  /* Verde */
+        #0077ff 80%,  /* Azul */
+        #7700ff 100%  /* Violeta */
+    );
+}</div>
+
+            <h3>🎯 Gradientes Lineares:</h3>
+            <div class="color-grid">
+                <div class="color-box gradient-linear-1">Linear Horizontal<br><small>to right</small></div>
+                <div class="color-box gradient-linear-2">Linear Diagonal<br><small>45deg</small></div>
+                <div class="color-box gradient-linear-3">Linear Vertical<br><small>to bottom</small></div>
+            </div>
+
+            <h3>🎯 Gradientes Radiais:</h3>
+            <div class="color-grid">
+                <div class="color-box gradient-radial-1">Radial Circular<br><small>circle</small></div>
+                <div class="color-box gradient-radial-2">Radial Elíptico<br><small>ellipse</small></div>
+            </div>
+
+            <h3>🌈 Gradiente Complexo (Arco-íris):</h3>
+            <div class="color-box gradient-complex gradient-complex-large">
+                Gradiente Arco-íris<br><small>6 cores com pontos de parada específicos</small>
+            </div>
+
+            <div class="color-info">
+                <strong>Vantagens:</strong> Efeitos visuais ricos • Sem imagens • Responsivos • Customizáveis • <strong>Desvantagens:</strong> Pode impactar performance • Complexidade de sintaxe
+            </div>
+        </section>
+
+        <!-- DEMONSTRAÇÃO INTERATIVA -->
+        <section>
+            <h2>🎮 Demonstração Interativa</h2>
+            <p>
+                Esta seção demonstra o uso dinâmico de cores através de animações e efeitos interativos.
+            </p>
+
+            <div class="interactive-demo">
+                <h3>🌈 Animação de Cores (Arco-íris Animado)</h3>
+                <div class="animated-rainbow">
+                    Cores em Movimento!
+                </div>
+                <p><small>Esta animação usa @keyframes para criar uma transição contínua entre as cores do arco-íris.</small></p>
+            </div>
+
+            <div class="code-example">
+/* Animação de cores usando keyframes */
+@keyframes colorChange {
+    0%     { background-color: red; }
+    16.66% { background-color: orange; }
+    33.33% { background-color: yellow; }
+    50%    { background-color: green; }
+    66.66% { background-color: blue; }
+    83.33% { background-color: indigo; }
+    100%   { background-color: violet; }
+}
+
+.animated-rainbow {
+    animation: colorChange 3s infinite;
+}</div>
+        </section>
+
+        <!-- BOAS PRÁTICAS -->
+        <section>
+            <h2>✅ Boas Práticas para Cores</h2>
+            
+            <h3>🎯 Escolha do Método de Cor:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Situação</th>
+                        <th>Método Recomendado</th>
+                        <th>Motivo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prototipagem rápida</td>
+                        <td>Cores nomeadas</td>
+                        <td>Rapidez e simplicidade</td>
+                    </tr>
+                    <tr>
+                        <td>Design systems</td>
+                        <td>HSL/HSLA</td>
+                        <td>Facilita variações e consistência</td>
+                    </tr>
+                    <tr>
+                        <td>Cores específicas da marca</td>
+                        <td>Hexadecimal</td>
+                        <td>Precisão e compacidade</td>
+                    </tr>
+                    <tr>
+                        <td>Transparência necessária</td>
+                        <td>RGBA ou HSLA</td>
+                        <td>Controle de opacidade</td>
+                    </tr>
+                    <tr>
+                        <td>Efeitos visuais</td>
+                        <td>Gradientes</td>
+                        <td>Impacto visual sem imagens</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>🔍 Dicas Importantes:</h3>
+            <ul class="list-style">
+                <li><strong>Acessibilidade:</strong> Sempre verifique o contraste entre texto e fundo (WCAG 2.1)</li>
+                <li><strong>Consistência:</strong> Use variáveis CSS para cores principais do projeto</li>
+                <li><strong>Performance:</strong> Prefira CSS a imagens para cores sólidas e gradientes simples</li>
+                <li><strong>Responsividade:</strong> Teste cores em diferentes dispositivos e condições de luz</li>
+                <li><strong>Organização:</strong> Documente sua paleta de cores em comentários CSS</li>
+            </ul>
+
+            <div class="code-example">
+/* Exemplo de variáveis CSS para cores */
+:root {
+    /* Cores principais da marca */
+    --cor-primaria: #3498db;
+    --cor-secundaria: #2ecc71;
+    --cor-acento: #e74c3c;
+    
+    /* Escala de cinzas */
+    --cinza-escuro: #2c3e50;
+    --cinza-medio: #7f8c8d;
+    --cinza-claro: #ecf0f1;
+    
+    /* Transparências */
+    --overlay-escuro: rgba(0, 0, 0, 0.7);
+    --overlay-claro: rgba(255, 255, 255, 0.9);
+}
+
+/* Uso das variáveis */
+.botao-principal {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.texto-secundario {
+    color: var(--cinza-medio);
+}</div>
+        </section>
+
+        <!-- CONCLUSÃO -->
+        <section>
+            <h2>🎓 Conclusão</h2>
+            <p>
+                O domínio das diferentes formas de especificar cores no CSS3 é essencial para todo desenvolvedor web. 
+                Cada método tem suas vantagens e aplicações específicas:
+            </p>
+            
+            <ul class="list-style-with-margin">
+                <li><strong>Cores nomeadas:</strong> Perfeitas para início rápido e cores básicas</li>
+                <li><strong>Hexadecimal:</strong> Padrão da indústria para especificação precisa</li>
+                <li><strong>RGB/RGBA:</strong> Intuitivas e com suporte a transparência</li>
+                <li><strong>HSL/HSLA:</strong> Ideais para designers e criação de paletas harmônicas</li>
+                <li><strong>Gradientes:</strong> Fundamentais para efeitos visuais modernos</li>
+            </ul>
+
+            <p>
+                A escolha do método depende do contexto, da necessidade de precisão, da importância da transparência 
+                e do público-alvo do projeto. Experimente diferentes abordagens e escolha a que melhor se adapta ao seu fluxo de trabalho.
+            </p>
+
+            <div class="color-info conclusion-highlight">
+                <strong>🚀 Próximos passos:</strong> Pratique combinando diferentes métodos, experimente com ferramentas como Adobe Color ou Coolors.co, 
+                e sempre teste a acessibilidade das suas escolhas de cores!
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript para demonstrar interatividade com cores
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adiciona evento de clique nos boxes de cor para mostrar informações
+            const colorBoxes = document.querySelectorAll('.color-box');
+            
+            colorBoxes.forEach(box => {
+                box.addEventListener('click', function() {
+                    const styles = window.getComputedStyle(this);
+                    const bgColor = styles.backgroundColor;
+                    alert(`Cor de fundo: ${bgColor}\nClique nos outros elementos para ver suas cores!`);
+                });
+            });
+
+            // Adiciona efeito de hover nos exemplos
+            colorBoxes.forEach(box => {
+                box.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05) rotate(2deg)';
+                });
+                
+                box.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

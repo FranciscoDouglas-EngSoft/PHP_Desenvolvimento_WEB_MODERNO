@@ -1,0 +1,27 @@
+/* Seletor de elemento */
+p {
+    color: blue;
+}
+
+/* Seletor de classe */
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Seletor de ID */
+#principal {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Seletor de atributo */
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+/* Seletor descendente */
+div span {
+    color: red;
+}

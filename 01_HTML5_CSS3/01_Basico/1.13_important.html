@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!important</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .texto {
+            color: blue;
+        }
+
+        .texto {
+            color: red !important;
+        }
+
+        #especifico {
+            color: green;
+        }
+
+        .importante {
+            color: purple !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>!important no CSS</h1>
+
+    <h2>O que é?</h2>
+    <p><strong>!important</strong> força uma regra CSS a ser aplicada, mesmo se houver outras regras mais específicas.</p>
+
+    <h2>Como usar?</h2>
+    <p>Coloque <code>!important</code> depois do valor:</p>
+    <p><code>color: red !important;</code></p>
+
+    <h2>Exemplo:</h2>
+    <p class="texto">Este texto deveria ser azul, mas fica vermelho por causa do !important</p>
+
+    <p id="especifico" class="importante">Este texto tem ID (verde) mas fica roxo por causa do !important</p>
+
+    <h2>Quando usar?</h2>
+    <ul>
+        <li>Quando outra regra está "ganhando"</li>
+        <li>Para sobrescrever estilos externos</li>
+        <li>Em casos de emergência</li>
+    </ul>
+
+    <h2>Cuidado!</h2>
+    <p><strong>Use pouco!</strong> O !important pode tornar o CSS difícil de manter.</p>
+
+</body>
+</html>

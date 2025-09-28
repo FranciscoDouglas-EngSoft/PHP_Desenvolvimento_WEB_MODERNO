@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medidas CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-size: 16px;
+        }
+
+        .exemplo {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 15px 0;
+        }
+
+        .px-exemplo {
+            width: 200px;
+            height: 50px;
+            background: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .percent-exemplo {
+            width: 50%;
+            height: 50px;
+            background: #e74c3c;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .em-exemplo {
+            font-size: 2em;
+            background: #2ecc71;
+            color: white;
+            padding: 10px;
+        }
+
+        .rem-exemplo {
+            font-size: 1.5rem;
+            background: #f39c12;
+            color: white;
+            padding: 10px;
+        }
+
+        .vw-exemplo {
+            width: 30vw;
+            height: 50px;
+            background: #9b59b6;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .vh-exemplo {
+            width: 200px;
+            height: 20vh;
+            background: #1abc9c;
+            color: white;
+            text-align: center;
+            line-height: 20vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unidades de Medidas CSS</h1>
+
+    <h2>Unidades Absolutas</h2>
+    <p><strong>Sempre têm o mesmo tamanho</strong>, não mudam.</p>
+
+    <h3>px (pixels)</h3>
+    <p>A mais usada. 1px = 1 ponto na tela.</p>
+    <div class="exemplo">
+        <div class="px-exemplo">200px de largura</div>
+    </div>
+
+    <h3>Outras absolutas:</h3>
+    <ul>
+        <li><strong>cm</strong> - Centímetros</li>
+        <li><strong>mm</strong> - Milímetros</li>
+        <li><strong>in</strong> - Polegadas</li>
+        <li><strong>pt</strong> - Pontos (usado em impressão)</li>
+    </ul>
+
+    <h2>Unidades Relativas</h2>
+    <p><strong>Mudam de tamanho</strong> conforme o contexto.</p>
+
+    <h3>% (porcentagem)</h3>
+    <p>Relativa ao elemento pai.</p>
+    <div class="exemplo">
+        <div class="percent-exemplo">50% da largura do pai</div>
+    </div>
+
+    <h3>em</h3>
+    <p>Relativa ao tamanho da fonte do próprio elemento.</p>
+    <div class="exemplo">
+        <div class="em-exemplo">2em = 2x o tamanho da fonte</div>
+    </div>
+
+    <h3>rem</h3>
+    <p>Relativa ao tamanho da fonte raiz (html).</p>
+    <div class="exemplo">
+        <div class="rem-exemplo">1.5rem = 1.5x a fonte raiz</div>
+    </div>
+
+    <h3>vw (viewport width)</h3>
+    <p>Relativa à largura da tela. 1vw = 1% da largura.</p>
+    <div class="exemplo">
+        <div class="vw-exemplo">30vw = 30% da tela</div>
+    </div>
+
+    <h3>vh (viewport height)</h3>
+    <p>Relativa à altura da tela. 1vh = 1% da altura.</p>
+    <div class="exemplo">
+        <div class="vh-exemplo">20vh = 20% da altura</div>
+    </div>
+
+    <h2>Quando usar cada uma?</h2>
+    <ul>
+        <li><strong>px</strong> - Para tamanhos fixos (bordas, sombras)</li>
+        <li><strong>%</strong> - Para layouts que se adaptam</li>
+        <li><strong>em</strong> - Para espaçamentos relativos à fonte</li>
+        <li><strong>rem</strong> - Para tamanhos de fonte consistentes</li>
+        <li><strong>vw/vh</strong> - Para elementos que ocupam parte da tela</li>
+    </ul>
+
+    <h2>Dica:</h2>
+    <p>📱 <strong>Unidades relativas</strong> são melhores para sites responsivos!</p>
+
+</body>
+</html>

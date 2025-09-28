@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes e Pseudo-Elementos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button:hover {
+            background: red;
+        }
+
+        p::first-letter {
+            font-size: 30px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-Classes e Pseudo-Elementos</h1>
+
+    <h2>Pseudo-Classes</h2>
+    <p>Usam <strong>:</strong> (dois pontos)</p>
+    <p>Selecionam <strong>estados</strong> dos elementos.</p>
+
+    <p><strong>Exemplo:</strong></p>
+    <button>Passe o mouse aqui</button>
+    
+    <p>O botão fica vermelho com <code>:hover</code></p>
+
+    <h2>Pseudo-Elementos</h2>
+    <p>Usam <strong>::</strong> (dois dois pontos)</p>
+    <p>Criam <strong>partes</strong> que não existem no HTML.</p>
+
+    <p><strong>Exemplo:</strong></p>
+    <p>Esta primeira letra é diferente.</p>
+    
+    <p>A primeira letra fica grande com <code>::first-letter</code></p>
+
+    <h2>Resumo</h2>
+    <ul>
+        <li><strong>Pseudo-classes (:)</strong> = Estados</li>
+        <li><strong>Pseudo-elementos (::)</strong> = Partes</li>
+    </ul>
+
+</body>
+</html>
