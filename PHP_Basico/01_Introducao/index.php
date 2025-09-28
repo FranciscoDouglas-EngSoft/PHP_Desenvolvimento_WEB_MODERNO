@@ -1,3 +1,4 @@
 <?php
-echo "Primeiro Codigo em PHP";
+echo "Teste no Terminal\n";
+print "Teste no Navegador";
 ?>
