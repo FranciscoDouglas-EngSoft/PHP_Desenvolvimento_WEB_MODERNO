@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viagem para Marte - O Futuro está Aqui</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border-radius: 10px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .info-box {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-box h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .highlight {
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .timeline {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .timeline h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .timeline-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-left: 4px solid #3498db;
+            border-radius: 5px;
+        }
+
+        .mars-facts {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .fact-card {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px;
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+        }
+
+        .fact-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #34495e;
+            color: white;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .mars-facts {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Viagem para Marte</h1>
+            <p class="subtitle">O sonho da humanidade está se tornando realidade!</p>
+        </header>
+
+        <div class="highlight">
+            <h2>🌟 É possível viajar para Marte hoje?</h2>
+            <p><strong>Resposta:</strong> Tecnicamente SIM! Temos a tecnologia necessária, mas ainda enfrentamos desafios significativos de custo, segurança e logística.</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="info-box">
+                <h2>🛸 Tecnologia Atual</h2>
+                <p>As principais agências espaciais como NASA, SpaceX e ESA já desenvolveram:</p>
+                <ul>
+                    <li>Foguetes poderosos (Falcon Heavy, SLS)</li>
+                    <li>Sistemas de suporte à vida</li>
+                    <li>Rovers e sondas bem-sucedidos</li>
+                    <li>Tecnologia de pouso em Marte</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h2>⏰ Quando será possível?</h2>
+                <p>As primeiras missões tripuladas estão previstas para:</p>
+                <ul>
+                    <li><strong>NASA Artemis:</strong> 2030-2035</li>
+                    <li><strong>SpaceX:</strong> 2026-2030</li>
+                    <li><strong>Missões chinesas:</strong> 2033-2037</li>
+                    <li><strong>Turismo espacial:</strong> 2040-2050</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <h3>📅 Cronologia das Conquistas Marcianas</h3>
+            <div class="timeline-item">
+                <strong>1965:</strong> Primeira sonda a sobrevoar Marte (Mariner 4)
+            </div>
+            <div class="timeline-item">
+                <strong>1976:</strong> Primeiro pouso bem-sucedido (Viking 1)
+            </div>
+            <div class="timeline-item">
+                <strong>1997:</strong> Primeiro rover (Sojourner)
+            </div>
+            <div class="timeline-item">
+                <strong>2021:</strong> Helicopter Ingenuity voa em Marte
+            </div>
+            <div class="timeline-item">
+                <strong>2024:</strong> Múltiplas missões ativas simultaneamente
+            </div>
+        </div>
+
+        <div class="mars-facts">
+            <div class="fact-card">
+                <div class="fact-number">687</div>
+                <div>dias marcianos por ano</div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-number">225M</div>
+                <div>km distância média da Terra</div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-number">9</div>
+                <div>meses de viagem</div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-number">-80°C</div>
+                <div>temperatura média</div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="info-box">
+                <h2>🚧 Principais Desafios</h2>
+                <ul>
+                    <li><strong>Radiação espacial:</strong> Exposição prolongada</li>
+                    <li><strong>Recursos limitados:</strong> Comida, água, oxigênio</li>
+                    <li><strong>Distância:</strong> Comunicação com 24min de atraso</li>
+                    <li><strong>Atmosfera:</strong> 95% CO₂, pressão baixa</li>
+                    <li><strong>Custo:</strong> Bilhões de dólares por missão</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h2>🔬 Preparativos em Andamento</h2>
+                <ul>
+                    <li>Testes de habitats em ambientes extremos</li>
+                    <li>Desenvolvimento de tecnologias ISRU</li>
+                    <li>Simulações de longa duração</li>
+                    <li>Estudos médicos sobre microgravidade</li>
+                    <li>Agricultura espacial e hidroponia</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight">
+            <h3>🌍 Conclusão</h3>
+            <p>Embora tecnicamente já seja possível enviar humanos a Marte, a realidade prática ainda requer alguns anos de desenvolvimento. O mais empolgante é que essa não é mais uma questão de "se" vamos a Marte, mas "quando" e "quem" chegará primeiro!</p>
+        </div>
+
+        <footer>
+            <p>🚀 O futuro da exploração espacial está mais próximo do que nunca!</p>
+            <p><em>Desenvolvido em 2025 - Era da Exploração Espacial</em></p>
+        </footer>
+    </div>
+</body>
+</html>
