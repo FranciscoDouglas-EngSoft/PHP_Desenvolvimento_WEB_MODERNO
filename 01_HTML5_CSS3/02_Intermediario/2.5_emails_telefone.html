@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag A - Hiperligações</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .exemplo {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .link-externo {
+            color: #3498db;
+        }
+
+        .link-email {
+            color: #e74c3c;
+        }
+
+        .link-telefone {
+            color: #27ae60;
+        }
+
+        .botao-link {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .botao-link:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tag &lt;a&gt; - Hiperligações</h1>
+
+    <h2>Links para outros sites</h2>
+    <div class="exemplo">
+        <p>Visite o <a href="https://www.google.com" class="link-externo" target="_blank" rel="noopener">Google</a></p>
+        <p>Acesse o <a href="https://www.youtube.com" class="link-externo" target="_blank" rel="noopener">YouTube</a></p>
+    </div>
+
+    <h2>Links para email</h2>
+    <div class="exemplo">
+        <p>Entre em contato: <a href="mailto:contato@exemplo.com" class="link-email">contato@exemplo.com</a></p>
+        <p>Suporte: <a href="mailto:suporte@exemplo.com?subject=Ajuda&body=Olá, preciso de ajuda com..." class="link-email">Enviar email para suporte</a></p>
+    </div>
+
+    <h2>Links para telefone</h2>
+    <div class="exemplo">
+        <p>Ligue agora: <a href="tel:+5511999999999" class="link-telefone">(11) 99999-9999</a></p>
+        <p>WhatsApp: <a href="https://wa.me/5511999999999" class="link-telefone" target="_blank" rel="noopener">Conversar no WhatsApp</a></p>
+    </div>
+
+    <h2>Links internos (mesma página)</h2>
+    <div class="exemplo">
+        <p><a href="#secao1">Ir para Seção 1</a></p>
+        <p><a href="#secao2">Ir para Seção 2</a></p>
+    </div>
+
+    <h2>Links para arquivos</h2>
+    <div class="exemplo">
+        <p><a href="documento.pdf" target="_blank">Baixar PDF</a></p>
+        <p><a href="imagem.jpg" target="_blank">Ver Imagem</a></p>
+    </div>
+
+    <h2>Links estilizados como botões</h2>
+    <div class="exemplo">
+        <a href="https://www.google.com" class="botao-link" target="_blank" rel="noopener">Acessar Google</a>
+        <a href="mailto:contato@exemplo.com" class="botao-link">Enviar Email</a>
+        <a href="tel:+5511999999999" class="botao-link">Ligar Agora</a>
+    </div>
+
+    <h2>Atributos importantes:</h2>
+    <ul>
+        <li><strong>href</strong> - Define o destino do link</li>
+        <li><strong>target="_blank"</strong> - Abre em nova aba</li>
+        <li><strong>title</strong> - Texto que aparece ao passar o mouse</li>
+    </ul>
+
+    <h2>Exemplos de href:</h2>
+    <div class="exemplo">
+        <p><code>href="https://site.com"</code> - Site externo</p>
+        <p><code>href="mailto:email@site.com"</code> - Email</p>
+        <p><code>href="tel:+5511999999999"</code> - Telefone</p>
+        <p><code>href="#secao"</code> - Link interno</p>
+        <p><code>href="arquivo.pdf"</code> - Arquivo</p>
+    </div>
+
+    <!-- Seções para demonstrar links internos -->
+    <br><br><br><br>
+    <h2 id="secao1">📍 Seção 1</h2>
+    <p>Você chegou na Seção 1! <a href="#top">Voltar ao topo</a></p>
+
+    <br><br><br><br>
+    <h2 id="secao2">📍 Seção 2</h2>
+    <p>Você chegou na Seção 2! <a href="#top">Voltar ao topo</a></p>
+
+</body>
+</html>

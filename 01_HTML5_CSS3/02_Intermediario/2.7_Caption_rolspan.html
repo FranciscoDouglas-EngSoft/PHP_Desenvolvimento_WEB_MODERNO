@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caption, Colspan e Rowspan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        caption {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .exemplo {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .destaque {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .destaque2 {
+            background-color: #27ae60;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Caption, Colspan e Rowspan</h1>
+
+    <h2>1. Caption - Título da Tabela</h2>
+    <p><strong>Caption</strong> adiciona um título à tabela.</p>
+    
+    <div class="exemplo">
+        <table>
+            <caption>Lista de Funcionários</caption>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Salário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João</td>
+                    <td>Desenvolvedor</td>
+                    <td>R$ 5.000</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>Designer</td>
+                    <td>R$ 4.500</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>2. Colspan - Une Colunas</h2>
+    <p><strong>Colspan</strong> faz uma célula ocupar várias colunas.</p>
+
+    <div class="exemplo">
+        <table>
+            <caption>Vendas por Trimestre</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th colspan="3">2024</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>1º Trim</th>
+                    <th>2º Trim</th>
+                    <th>3º Trim</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Notebook</td>
+                    <td>100</td>
+                    <td>150</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Mouse</td>
+                    <td>300</td>
+                    <td>250</td>
+                    <td>400</td>
+                </tr>
+                <tr class="destaque">
+                    <td>Total</td>
+                    <td colspan="3">1.400 unidades</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>3. Rowspan - Une Linhas</h2>
+    <p><strong>Rowspan</strong> faz uma célula ocupar várias linhas.</p>
+
+    <div class="exemplo">
+        <table>
+            <caption>Horário de Aulas</caption>
+            <thead>
+                <tr>
+                    <th>Horário</th>
+                    <th>Segunda</th>
+                    <th>Terça</th>
+                    <th>Quarta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8:00 - 9:00</td>
+                    <td rowspan="2" class="destaque">Matemática</td>
+                    <td>História</td>
+                    <td>Inglês</td>
+                </tr>
+                <tr>
+                    <td>9:00 - 10:00</td>
+                    <td>Geografia</td>
+                    <td rowspan="2" class="destaque2">Educação Física</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td>Português</td>
+                    <td>Ciências</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>4. Exemplo Combinado</h2>
+    <p>Usando <strong>caption</strong>, <strong>colspan</strong> e <strong>rowspan</strong> juntos:</p>
+
+    <div class="exemplo">
+        <table>
+            <caption>Relatório de Vendas - Região Sudeste</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">Estado</th>
+                    <th colspan="2">Vendas</th>
+                    <th rowspan="2">Total</th>
+                </tr>
+                <tr>
+                    <th>1º Sem</th>
+                    <th>2º Sem</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>São Paulo</td>
+                    <td>1.000</td>
+                    <td>1.200</td>
+                    <td>2.200</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td>800</td>
+                    <td>900</td>
+                    <td>1.700</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td>600</td>
+                    <td>700</td>
+                    <td>1.300</td>
+                </tr>
+                <tr class="destaque">
+                    <td>Total Geral</td>
+                    <td colspan="3">5.200 unidades</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Como usar:</h2>
+    <ul>
+        <li><strong>&lt;caption&gt;</strong> - Dentro de &lt;table&gt;, antes de tudo</li>
+        <li><strong>colspan="3"</strong> - Célula ocupa 3 colunas</li>
+        <li><strong>rowspan="2"</strong> - Célula ocupa 2 linhas</li>
+    </ul>
+
+    <h2>Exemplo de código:</h2>
+    <div class="exemplo">
+        <pre>
+&lt;table&gt;
+  &lt;caption&gt;Título da Tabela&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th colspan="2"&gt;Une 2 colunas&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;Une 2 linhas&lt;/td&gt;
+    &lt;td&gt;Célula normal&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </pre>
+    </div>
+
+</body>
+</html>

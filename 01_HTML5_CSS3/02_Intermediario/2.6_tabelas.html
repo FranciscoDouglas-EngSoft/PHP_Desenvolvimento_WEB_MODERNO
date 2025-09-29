@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .exemplo {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas HTML</h1>
+
+    <h2>Tags principais:</h2>
+    <ul>
+        <li><strong>&lt;table&gt;</strong> - Cria a tabela</li>
+        <li><strong>&lt;thead&gt;</strong> - Cabeçalho da tabela</li>
+        <li><strong>&lt;tbody&gt;</strong> - Corpo da tabela</li>
+        <li><strong>&lt;tr&gt;</strong> - Linha da tabela</li>
+        <li><strong>&lt;th&gt;</strong> - Célula do cabeçalho</li>
+        <li><strong>&lt;td&gt;</strong> - Célula de dados</li>
+    </ul>
+
+    <h2>Exemplo simples:</h2>
+    <div class="exemplo">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Cidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João</td>
+                    <td>25</td>
+                    <td>São Paulo</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>30</td>
+                    <td>Rio de Janeiro</td>
+                </tr>
+                <tr>
+                    <td>Pedro</td>
+                    <td>28</td>
+                    <td>Belo Horizonte</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Tabela de produtos:</h2>
+    <div class="exemplo">
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Notebook</td>
+                    <td>R$ 2.500,00</td>
+                    <td>10</td>
+                    <td>Disponível</td>
+                </tr>
+                <tr>
+                    <td>Mouse</td>
+                    <td>R$ 50,00</td>
+                    <td>25</td>
+                    <td>Disponível</td>
+                </tr>
+                <tr>
+                    <td>Teclado</td>
+                    <td>R$ 120,00</td>
+                    <td>0</td>
+                    <td>Esgotado</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Estrutura básica:</h2>
+    <div class="exemplo">
+        <pre>
+        &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+            &lt;th&gt;Cabeçalho 1&lt;/th&gt;
+            &lt;th&gt;Cabeçalho 2&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+            &lt;td&gt;Dado 1&lt;/td&gt;
+            &lt;td&gt;Dado 2&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;/table&gt;
+        </pre>
+    </div>
+
+    <h2>Dicas importantes:</h2>
+    <ul>
+        <li><strong>thead</strong> - Use para o cabeçalho</li>
+        <li><strong>tbody</strong> - Use para os dados</li>
+        <li><strong>th</strong> - Para títulos das colunas</li>
+        <li><strong>td</strong> - Para dados normais</li>
+        <li>Use CSS para estilizar (bordas, cores, etc.)</li>
+    </ul>
+
+</body>
+</html>
