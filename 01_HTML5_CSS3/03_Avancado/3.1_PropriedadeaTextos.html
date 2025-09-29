@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades de Textos em CSS3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #4CAF50;
+            margin-top: 30px;
+        }
+
+        .exemplo {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .exemplo-titulo {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Exemplos de propriedades de texto */
+        .color-exemplo {
+            color: #E91E63;
+        }
+
+        .font-family-exemplo1 {
+            font-family: Arial, sans-serif;
+        }
+
+        .font-family-exemplo2 {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .font-family-exemplo3 {
+            font-family: monospace;
+        }
+
+        .font-size-exemplo1 {
+            font-size: 12px;
+        }
+
+        .font-size-exemplo2 {
+            font-size: 1.5em;
+        }
+
+        .font-size-exemplo3 {
+            font-size: 150%;
+        }
+
+        .font-weight-exemplo1 {
+            font-weight: normal;
+        }
+
+        .font-weight-exemplo2 {
+            font-weight: bold;
+        }
+
+        .font-weight-exemplo3 {
+            font-weight: 900;
+        }
+
+        .text-align-exemplo1 {
+            text-align: left;
+        }
+
+        .text-align-exemplo2 {
+            text-align: center;
+        }
+
+        .text-align-exemplo3 {
+            text-align: right;
+        }
+
+        .text-align-exemplo4 {
+            text-align: justify;
+        }
+
+        .text-decoration-exemplo1 {
+            text-decoration: underline;
+        }
+
+        .text-decoration-exemplo2 {
+            text-decoration: overline;
+        }
+
+        .text-decoration-exemplo3 {
+            text-decoration: line-through;
+        }
+
+        .text-decoration-exemplo4 {
+            text-decoration: none;
+            color: blue;
+        }
+
+        .text-transform-exemplo1 {
+            text-transform: uppercase;
+        }
+
+        .text-transform-exemplo2 {
+            text-transform: lowercase;
+        }
+
+        .text-transform-exemplo3 {
+            text-transform: capitalize;
+        }
+
+        .line-height-exemplo1 {
+            line-height: 1.2;
+            border: 1px solid #ccc;
+        }
+
+        .line-height-exemplo2 {
+            line-height: 2.0;
+            border: 1px solid #ccc;
+        }
+
+        .letter-spacing-exemplo1 {
+            letter-spacing: 1px;
+        }
+
+        .letter-spacing-exemplo2 {
+            letter-spacing: 3px;
+        }
+
+        .word-spacing-exemplo1 {
+            word-spacing: 2px;
+        }
+
+        .word-spacing-exemplo2 {
+            word-spacing: 10px;
+        }
+
+        .text-shadow-exemplo1 {
+            text-shadow: 2px 2px 4px #999;
+        }
+
+        .text-shadow-exemplo2 {
+            text-shadow: 0 0 3px #FF0000;
+        }
+
+        .text-shadow-exemplo3 {
+            color: white;
+            text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+        }
+
+        .white-space-exemplo1 {
+            white-space: normal;
+            width: 150px;
+            border: 1px solid #ccc;
+        }
+
+        .white-space-exemplo2 {
+            white-space: nowrap;
+            width: 150px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        .white-space-exemplo3 {
+            white-space: pre;
+            width: 150px;
+            border: 1px solid #ccc;
+        }
+
+        .text-overflow-exemplo {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 150px;
+            border: 1px solid #ccc;
+        }
+
+        .word-break-exemplo {
+            width: 100px;
+            border: 1px solid #ccc;
+            word-break: break-all;
+        }
+
+        .word-wrap-exemplo {
+            width: 100px;
+            border: 1px solid #ccc;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedades de Textos em CSS3</h1>
+
+    <p>O CSS3 oferece diversas propriedades para estilizar textos, permitindo ajustar cores, fontes, tamanhos, espaçamentos e muito mais.</p>
+
+    <h2>1. Color (cor do texto)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>color: #E91E63;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="color-exemplo">Este texto está com a cor personalizada.</p>
+    </div>
+
+    <h2>2. Font-family (família de fonte)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>font-family: Arial, sans-serif;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="font-family-exemplo1">Este texto usa fonte Arial (sem serifa).</p>
+        <p class="font-family-exemplo2">Este texto usa Times New Roman (com serifa).</p>
+        <p class="font-family-exemplo3">Este texto usa fonte monospace.</p>
+    </div>
+
+    <h2>3. Font-size (tamanho da fonte)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>font-size: 12px;
+font-size: 1.5em;
+font-size: 150%;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="font-size-exemplo1">Este texto tem tamanho de 12px.</p>
+        <p class="font-size-exemplo2">Este texto tem tamanho de 1.5em.</p>
+        <p class="font-size-exemplo3">Este texto tem tamanho de 150%.</p>
+    </div>
+
+    <h2>4. Font-weight (peso/espessura da fonte)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>font-weight: normal;
+font-weight: bold;
+font-weight: 900;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="font-weight-exemplo1">Este texto tem peso normal.</p>
+        <p class="font-weight-exemplo2">Este texto tem peso negrito (bold).</p>
+        <p class="font-weight-exemplo3">Este texto tem peso 900 (extra-bold).</p>
+    </div>
+
+    <h2>5. Text-align (alinhamento de texto)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>text-align: left;
+text-align: center;
+text-align: right;
+text-align: justify;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="text-align-exemplo1">Este texto está alinhado à esquerda.</p>
+        <p class="text-align-exemplo2">Este texto está alinhado ao centro.</p>
+        <p class="text-align-exemplo3">Este texto está alinhado à direita.</p>
+        <p class="text-align-exemplo4">Este texto está justificado. O alinhamento justificado faz com que o texto se alinhe tanto à margem esquerda quanto à margem direita, criando linhas de tamanhos iguais, exceto possivelmente a última linha.</p>
+    </div>
+
+    <h2>6. Text-decoration (decoração de texto)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>text-decoration: underline;
+text-decoration: overline;
+text-decoration: line-through;
+text-decoration: none;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="text-decoration-exemplo1">Este texto tem sublinhado.</p>
+        <p class="text-decoration-exemplo2">Este texto tem linha acima.</p>
+        <p class="text-decoration-exemplo3">Este texto tem uma linha no meio (riscado).</p>
+        <a href="#" class="text-decoration-exemplo4">Este link não tem decoração (none)</a>
+    </div>
+
+    <h2>7. Text-transform (transformação de texto)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>text-transform: uppercase;
+text-transform: lowercase;
+text-transform: capitalize;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="text-transform-exemplo1">Este texto está em maiúsculas.</p>
+        <p class="text-transform-exemplo2">Este TEXTO ESTÁ em minúsculas.</p>
+        <p class="text-transform-exemplo3">este texto tem a primeira letra de cada palavra em maiúscula.</p>
+    </div>
+
+    <h2>8. Line-height (altura da linha)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>line-height: 1.2;
+line-height: 2.0;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="line-height-exemplo1">Este texto tem altura de linha padrão (1.2). Esta propriedade controla o espaçamento entre as linhas de texto, o que pode melhorar a legibilidade.</p>
+        <p class="line-height-exemplo2">Este texto tem altura de linha maior (2.0). Observe como há mais espaço entre as linhas, tornando o texto mais arejado e fácil de ler em alguns casos.</p>
+    </div>
+
+    <h2>9. Letter-spacing (espaçamento entre letras)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>letter-spacing: 1px;
+letter-spacing: 3px;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="letter-spacing-exemplo1">Este texto tem espaçamento entre letras de 1px.</p>
+        <p class="letter-spacing-exemplo2">Este texto tem espaçamento entre letras de 3px.</p>
+    </div>
+
+    <h2>10. Word-spacing (espaçamento entre palavras)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>word-spacing: 2px;
+word-spacing: 10px;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="word-spacing-exemplo1">Este texto tem espaçamento entre palavras de 2px.</p>
+        <p class="word-spacing-exemplo2">Este texto tem espaçamento entre palavras de 10px.</p>
+    </div>
+
+    <h2>11. Text-shadow (sombra de texto)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>text-shadow: 2px 2px 4px #999;
+text-shadow: 0 0 3px #FF0000;
+text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="text-shadow-exemplo1">Este texto tem uma sombra suave.</p>
+        <p class="text-shadow-exemplo2">Este texto tem um efeito de brilho.</p>
+        <p class="text-shadow-exemplo3">Este texto tem um contorno.</p>
+    </div>
+
+    <h2>12. White-space (tratamento de espaços em branco)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>white-space: normal;
+white-space: nowrap;
+white-space: pre;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="white-space-exemplo1">Este texto quebra normalmente quando atinge o limite da caixa.</p>
+        <p class="white-space-exemplo2">Este texto não quebra mesmo que atinja o limite da caixa (nowrap).</p>
+        <p class="white-space-exemplo3">Este texto
+mantém todos os    espaços
+e quebras   de linha.</p>
+    </div>
+
+    <h2>13. Text-overflow (overflow de texto)</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+width: 150px;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p class="text-overflow-exemplo">Este é um texto longo que será cortado e mostrará reticências (...) no final.</p>
+    </div>
+
+    <h2>14. Word-break e Word-wrap</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">CSS:</div>
+        <pre>word-break: break-all;
+word-wrap: break-word;</pre>
+        <div class="exemplo-titulo">Resultado:</div>
+        <p>word-break: break-all (quebra em qualquer caractere):</p>
+        <p class="word-break-exemplo">Estequebratextoemqualquercaractere</p>
+        
+        <p>word-wrap: break-word (quebra palavras longas):</p>
+        <p class="word-wrap-exemplo">Estequebratextosomenteem palavrasmuuuuitolongas</p>
+    </div>
+
+    <h2>Combinando Propriedades</h2>
+    <div class="exemplo">
+        <div class="exemplo-titulo">Exemplo de estilo tipográfico completo:</div>
+        <pre>p {
+  color: #333;
+  font-family: 'Georgia', serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}</pre>
+    </div>
+
+    <p><strong>Nota:</strong> As propriedades CSS para texto são uma parte fundamental do design web, permitindo criar layouts com boa legibilidade e expressão visual. É importante escolher combinações de propriedades que mantenham o texto acessível e fácil de ler.</p>
+</body>
+</html>

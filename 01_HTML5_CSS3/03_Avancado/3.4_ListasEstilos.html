@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos em Listas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        /* Estilos para listas não-ordenadas */
+        .lista-disc {
+            list-style-type: disc; /* Círculo preenchido (padrão) */
+        }
+        
+        .lista-circle {
+            list-style-type: circle; /* Círculo vazado */
+        }
+        
+        .lista-square {
+            list-style-type: square; /* Quadrado */
+        }
+        
+        .lista-none {
+            list-style-type: none; /* Sem marcador */
+        }
+        
+        /* Estilos para listas ordenadas */
+        .lista-letras {
+            list-style-type: lower-alpha; /* a, b, c */
+        }
+        
+        .lista-romanos {
+            list-style-type: upper-roman; /* I, II, III */
+        }
+        
+        /* Posição dos marcadores */
+        .lista-inside {
+            list-style-position: inside; /* Marcador dentro do bloco de texto */
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        
+        /* Imagem como marcador */
+        .lista-imagem {
+            list-style-image: url('https://via.placeholder.com/10');
+        }
+    </style>
+</head>
+<body>
+    <h1>Estilos em Listas com CSS</h1>
+    
+    <h2>Tipos de marcadores para listas não-ordenadas</h2>
+    
+    <h3>Círculo preenchido (padrão)</h3>
+    <ul class="lista-disc">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    
+    <h3>Círculo vazado</h3>
+    <ul class="lista-circle">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    
+    <h3>Quadrado</h3>
+    <ul class="lista-square">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    
+    <h3>Sem marcador</h3>
+    <ul class="lista-none">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    
+    <h2>Tipos de marcadores para listas ordenadas</h2>
+    
+    <h3>Números (padrão)</h3>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    
+    <h3>Letras</h3>
+    <ol class="lista-letras">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    
+    <h3>Algarismos romanos</h3>
+    <ol class="lista-romanos">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    
+    <h2>Posição do marcador</h2>
+    <ul class="lista-inside">
+        <li>Este é um item com o marcador dentro do bloco de texto</li>
+        <li>Outro item da lista</li>
+    </ul>
+    
+    <h2>Imagem como marcador</h2>
+    <ul class="lista-imagem">
+        <li>Item com imagem como marcador</li>
+        <li>Outro item</li>
+    </ul>
+</body>
+</html>
