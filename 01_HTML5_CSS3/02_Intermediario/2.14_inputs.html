@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Inputs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .exemplo {
+            background: #f5f5f5;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipos de Inputs</h1>
+
+    <form>
+        <label for="texto">Texto normal:</label>
+        <input type="text" id="texto" name="texto" placeholder="Digite seu nome">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com">
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Sua senha">
+
+        <label for="numero">Número:</label>
+        <input type="number" id="numero" name="numero" placeholder="Idade">
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data">
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora">
+
+        <label for="cor">Cor:</label>
+        <input type="color" id="cor" name="cor">
+
+        <label for="arquivo">Arquivo:</label>
+        <input type="file" id="arquivo" name="arquivo">
+
+        <label for="url">URL:</label>
+        <input type="url" id="url" name="url" placeholder="https://site.com">
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+
+        <label for="busca">Busca:</label>
+        <input type="search" id="busca" name="busca" placeholder="Pesquisar...">
+
+        <label>Opções (radio):</label>
+        <input type="radio" id="opcao1" name="opcoes" value="1">
+        <label for="opcao1">Opção 1</label>
+        <input type="radio" id="opcao2" name="opcoes" value="2">
+        <label for="opcao2">Opção 2</label>
+        <br><br>
+
+        <label>Múltipla escolha (checkbox):</label>
+        <input type="checkbox" id="check1" name="check1">
+        <label for="check1">Item 1</label>
+        <input type="checkbox" id="check2" name="check2">
+        <label for="check2">Item 2</label>
+        <br><br>
+
+        <label for="select">Lista (select):</label>
+        <select id="select" name="select">
+            <option value="">Escolha uma opção</option>
+            <option value="1">Opção 1</option>
+            <option value="2">Opção 2</option>
+            <option value="3">Opção 3</option>
+        </select>
+
+        <label for="textarea">Texto longo:</label>
+        <textarea id="textarea" name="textarea" rows="3" placeholder="Digite sua mensagem..."></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Lista dos tipos:</h2>
+    <div class="exemplo">
+        <ul>
+            <li><strong>text</strong> - Texto normal</li>
+            <li><strong>email</strong> - Validação de email</li>
+            <li><strong>password</strong> - Senha (oculta)</li>
+            <li><strong>number</strong> - Apenas números</li>
+            <li><strong>date</strong> - Seletor de data</li>
+            <li><strong>time</strong> - Seletor de hora</li>
+            <li><strong>color</strong> - Seletor de cores</li>
+            <li><strong>file</strong> - Upload de arquivo</li>
+            <li><strong>url</strong> - Validação de URL</li>
+            <li><strong>tel</strong> - Telefone</li>
+            <li><strong>search</strong> - Campo de busca</li>
+            <li><strong>radio</strong> - Escolha única</li>
+            <li><strong>checkbox</strong> - Múltipla escolha</li>
+        </ul>
+    </div>
+
+    <h2>Outros elementos:</h2>
+    <div class="exemplo">
+        <ul>
+            <li><strong>select</strong> - Lista suspensa</li>
+            <li><strong>textarea</strong> - Texto longo</li>
+            <li><strong>button</strong> - Botão</li>
+        </ul>
+    </div>
+
+</body>
+</html>

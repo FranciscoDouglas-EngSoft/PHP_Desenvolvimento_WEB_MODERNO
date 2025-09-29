@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabela – Dimensões e Alinhamentos</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background: #fff;
+  }
+
+  th, td {
+    border: 1px solid #333;
+    padding: 8px;
+  }
+
+  /* Largura das colunas */
+  col:nth-child(1) { width: 40%; }
+  col:nth-child(2) { width: 20%; }
+  col:nth-child(3) { width: 40%; }
+
+  /* Classes de alinhamento vertical */
+  .top { vertical-align: top; }
+  .middle { vertical-align: middle; }
+  .bottom { vertical-align: bottom; }
+
+  /* Alinhamento horizontal personalizado */
+  .center { text-align: center; }
+  .right { text-align: right; }
+</style>
+</head>
+<body>
+<h2>Exemplo de Tabela com Dimensões e Alinhamentos</h2>
+
+<table>
+  <colgroup>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Cidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="top" style="height:60px;">Maria</td>
+      <td class="center middle">28</td>
+      <td class="right bottom">São Paulo</td>
+    </tr>
+    <tr>
+      <td class="top" style="height:60px;">João</td>
+      <td class="center middle">35</td>
+      <td class="right bottom">Rio de Janeiro</td>
+    </tr>
+    <tr>
+      <td class="top" style="height:60px;">Ana</td>
+      <td class="center middle">22</td>
+      <td class="right bottom">Belo Horizonte</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

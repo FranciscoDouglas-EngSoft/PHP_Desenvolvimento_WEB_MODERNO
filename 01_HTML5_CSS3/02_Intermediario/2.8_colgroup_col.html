@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Tabela com Colgroup</title>
+  <style>
+    table {
+      width: 60%;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+
+    /* Estilos aplicados via <col> */
+    .col-nome {
+      background-color: #f0f8ff;
+    }
+    .col-idade {
+      background-color: #ffe4e1;
+    }
+    .col-cidade {
+      background-color: #f5f5dc;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Tabela de Exemplo</h2>
+  <table>
+    <!-- Definição das colunas -->
+    <colgroup>
+      <col class="col-nome">
+      <col class="col-idade">
+      <col class="col-cidade">
+    </colgroup>
+
+    <!-- Cabeçalho -->
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Cidade</th>
+      </tr>
+    </thead>
+
+    <!-- Corpo -->
+    <tbody>
+      <tr>
+        <td>Maria</td>
+        <td>28</td>
+        <td>São Paulo</td>
+      </tr>
+      <tr>
+        <td>João</td>
+        <td>35</td>
+        <td>Rio de Janeiro</td>
+      </tr>
+      <tr>
+        <td>Ana</td>
+        <td>22</td>
+        <td>Belo Horizonte</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

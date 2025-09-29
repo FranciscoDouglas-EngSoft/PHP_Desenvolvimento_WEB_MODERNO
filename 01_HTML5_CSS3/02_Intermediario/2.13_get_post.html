@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET e POST</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 200px;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>GET e POST</h1>
+
+    <h2>GET</h2>
+    <p>Dados aparecem na URL. Use para <strong>buscar</strong>.</p>
+    
+    <form method="get">
+        <input type="text" name="busca" placeholder="Buscar...">
+        <br>
+        <button type="submit">Buscar</button>
+    </form>
+    <p><small>Após enviar: <code>pagina.html?busca=texto</code></small></p>
+
+    <h2>POST</h2>
+    <p>Dados não aparecem na URL. Use para <strong>enviar</strong> dados sensíveis.</p>
+
+    <form method="post">
+        <input type="text" name="nome" placeholder="Nome">
+        <br>
+        <input type="password" name="senha" placeholder="Senha">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <p><small>Dados ficam ocultos na URL</small></p>
+
+    <h2>Resumo:</h2>
+    <ul>
+        <li><strong>GET:</strong> Dados na URL - para buscar</li>
+        <li><strong>POST:</strong> Dados ocultos - para enviar</li>
+    </ul>
+
+</body>
+</html>
