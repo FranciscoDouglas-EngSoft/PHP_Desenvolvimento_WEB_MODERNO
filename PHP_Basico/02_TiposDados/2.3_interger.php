@@ -24,3 +24,8 @@ $var5 = "1234";
 $var5 = (int)$var5;
 echo "<br>";
 echo gettype($var5); //integer
+
+//Como saberr o tipo de uma variável
+echo "<br>";
+$final = 100;
+var_dump($final); //mostra o tipo e o valor da variável
