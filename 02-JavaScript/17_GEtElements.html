@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos GetElements em JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        .item {
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+        }
+        
+        .resultado {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+        
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Métodos GetElements em JavaScript</h1>
+    
+    <!-- 1. getElementById -->
+    <section>
+        <h2>getElementById</h2>
+        <div id="elemento-unico">Elemento com ID único</div>
+        <button onclick="porId()">Buscar por ID</button>
+        <div id="resultado1" class="resultado"></div>
+    </section>
+    
+    <!-- 2. getElementsByClassName -->
+    <section>
+        <h2>getElementsByClassName</h2>
+        <div class="item">Primeiro item</div>
+        <div class="item">Segundo item</div>
+        <div class="item">Terceiro item</div>
+        <button onclick="porClasse()">Buscar por classe</button>
+        <div id="resultado2" class="resultado"></div>
+    </section>
+    
+    <!-- 3. getElementsByTagName -->
+    <section>
+        <h2>getElementsByTagName</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <button onclick="porTag()">Buscar por tag</button>
+        <div id="resultado3" class="resultado"></div>
+    </section>
+    
+    <!-- 4. getElementsByName -->
+    <section>
+        <h2>getElementsByName</h2>
+        <form>
+            <div>
+                <input id="opcao1" type="radio" name="opcao" value="1">
+                <label for="opcao1">Opção 1</label>
+            </div>
+            <div>
+                <input id="opcao2" type="radio" name="opcao" value="2">
+                <label for="opcao2">Opção 2</label>
+            </div>
+            <div>
+                <input id="opcao3" type="radio" name="opcao" value="3">
+                <label for="opcao3">Opção 3</label>
+            </div>
+        </form>
+        <button onclick="porName()">Buscar por name</button>
+        <div id="resultado4" class="resultado"></div>
+    </section>
+    
+    <script>
+        // 1. getElementById - Retorna um único elemento pelo ID
+        function porId() {
+            // Seleciona o elemento com ID "elemento-unico"
+            const elemento = document.getElementById("elemento-unico");
+            
+            // Modifica o elemento
+            elemento.style.backgroundColor = "lightgreen";
+            
+            // Mostra o resultado
+            document.getElementById("resultado1").textContent = 
+                "Elemento encontrado: " + elemento.textContent;
+        }
+        
+        // 2. getElementsByClassName - Retorna uma coleção de elementos pela classe
+        function porClasse() {
+            // Seleciona todos os elementos com a classe "item"
+            const itens = document.getElementsByClassName("item");
+            
+            // Mostra quantos elementos foram encontrados
+            let texto = "Encontrados: " + itens.length + " elementos<br>";
+            
+            // Percorre e modifica cada elemento
+            for (let i = 0; i < itens.length; i++) {
+                itens[i].style.backgroundColor = "lightblue";
+                texto += "Item " + (i+1) + ": " + itens[i].textContent + "<br>";
+            }
+            
+            document.getElementById("resultado2").innerHTML = texto;
+        }
+        
+        // 3. getElementsByTagName - Retorna uma coleção de elementos pela tag
+        function porTag() {
+            // Seleciona todos os elementos <li>
+            const itens = document.getElementsByTagName("li");
+            
+            // Mostra quantos elementos foram encontrados
+            let texto = "Encontrados: " + itens.length + " elementos<br>";
+            
+            // Percorre e modifica cada elemento
+            for (let i = 0; i < itens.length; i++) {
+                itens[i].style.backgroundColor = "lightyellow";
+                texto += "Item " + (i+1) + ": " + itens[i].textContent + "<br>";
+            }
+            
+            document.getElementById("resultado3").innerHTML = texto;
+        }
+        
+        // 4. getElementsByName - Retorna uma coleção de elementos pelo atributo name
+        function porName() {
+            // Seleciona elementos com name="opcao"
+            const opcoes = document.getElementsByName("opcao");
+            
+            // Mostra quantos elementos foram encontrados
+            let texto = "Encontrados: " + opcoes.length + " elementos<br>";
+            
+            // Verifica qual está selecionado
+            for (let i = 0; i < opcoes.length; i++) {
+                if (opcoes[i].checked) {
+                    texto += "Selecionada: Opção " + opcoes[i].value;
+                }
+            }
+            
+            document.getElementById("resultado4").innerHTML = texto;
+        }
+    </script>
+</body>
+</html>

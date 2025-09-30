@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Titulo da Pagina que sera Mudado</h1>
+    <!--Introdução ao DOM - Document Object Model
+
+        /O DOM é uma interface de programação para documentos HTML e XML. Ele representa a estrutura do documento como uma árvore de objetos, permitindo que linguagens de programação, como JavaScript, manipulem o conteúdo, a estrutura e o estilo dos elementos da página web. -->
+
+
+    <script>
+        const h = document.querySelector('h1');
+        h.addEventListener('click', function() {
+            h.textContent = 'Titulo Alterado';
+            h.style.color = 'blue';
+        });
+    </script>
+</body>
+</html>

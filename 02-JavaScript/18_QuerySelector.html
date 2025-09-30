@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector e querySelectorAll</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        .secao {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .destaque {
+            color: blue;
+        }
+        
+        .resultado {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+        
+        button {
+            padding: 5px 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>querySelector e querySelectorAll</h1>
+    <p>Métodos modernos para selecionar elementos usando seletores CSS</p>
+    
+    <div class="secao">
+        <h2>querySelector</h2>
+        <p>Retorna o <span class="destaque">primeiro</span> elemento que corresponde ao seletor</p>
+        
+        <div id="exemplo1">
+            <p>Primeiro parágrafo</p>
+            <p>Segundo parágrafo</p>
+            <p>Terceiro parágrafo</p>
+        </div>
+        
+        <button onclick="usarQuerySelector()">Selecionar primeiro parágrafo</button>
+        <div id="resultado1" class="resultado"></div>
+    </div>
+    
+    <div class="secao">
+        <h2>querySelectorAll</h2>
+        <p>Retorna <span class="destaque">todos</span> os elementos que correspondem ao seletor</p>
+        
+        <div id="exemplo2">
+            <ul>
+                <li class="item">Item 1</li>
+                <li>Item 2</li>
+                <li class="item">Item 3</li>
+                <li>Item 4</li>
+                <li class="item">Item 5</li>
+            </ul>
+        </div>
+        
+        <button onclick="usarQuerySelectorAll()">Selecionar itens com classe 'item'</button>
+        <div id="resultado2" class="resultado"></div>
+    </div>
+    
+    <div class="secao">
+        <h2>Seletores CSS complexos</h2>
+        <p>Podemos usar <span class="destaque">qualquer seletor CSS</span> válido</p>
+        
+        <div id="exemplo3">
+            <div class="container">
+                <div class="box">
+                    <p>Texto dentro de .box</p>
+                </div>
+                <div class="box destaque">
+                    <p>Texto dentro de .box.destaque</p>
+                </div>
+                <div class="box">
+                    <p>Outro texto dentro de .box</p>
+                </div>
+            </div>
+        </div>
+        
+        <button onclick="usarSeletorComplexo()">Usar seletor complexo</button>
+        <div id="resultado3" class="resultado"></div>
+    </div>
+    
+    <script>
+        // 1. querySelector - Retorna o primeiro elemento que corresponde ao seletor
+        function usarQuerySelector() {
+            // Seleciona o primeiro parágrafo dentro de #exemplo1
+            const elemento = document.querySelector('#exemplo1 p');
+            
+            // Modifica o elemento
+            elemento.style.backgroundColor = "yellow";
+            
+            // Mostra informação
+            document.getElementById("resultado1").textContent = 
+                "Elemento selecionado: " + elemento.textContent;
+        }
+        
+        // 2. querySelectorAll - Retorna todos os elementos que correspondem ao seletor
+        function usarQuerySelectorAll() {
+            // Seleciona todos os <li> com a classe "item"
+            const elementos = document.querySelectorAll('#exemplo2 .item');
+            
+            // Mostra quantos elementos foram encontrados
+            let texto = "Encontrados " + elementos.length + " elementos:<br>";
+            
+            // Percorre os elementos
+            for (let i = 0; i < elementos.length; i++) {
+                elementos[i].style.backgroundColor = "lightgreen";
+                texto += "Elemento " + (i+1) + ": " + elementos[i].textContent + "<br>";
+            }
+            
+            document.getElementById("resultado2").innerHTML = texto;
+        }
+        
+        // 3. Usando seletores CSS complexos
+        function usarSeletorComplexo() {
+            // Seleciona todos os parágrafos dentro de divs com classe "box"
+            const elementos = document.querySelectorAll('.box p');
+            
+            // Mostra quantos elementos foram encontrados
+            let texto = "Encontrados " + elementos.length + " elementos:<br>";
+            
+            // Percorre os elementos
+            for (let i = 0; i < elementos.length; i++) {
+                elementos[i].style.fontWeight = "bold";
+                texto += "Elemento " + (i+1) + ": " + elementos[i].textContent + "<br>";
+            }
+            
+            // Seleciona apenas o parágrafo dentro da div com classes "box" e "destaque"
+            const elementoEspecial = document.querySelector('.box.destaque p');
+            elementoEspecial.style.color = "red";
+            
+            texto += "<br>Elemento especial: " + elementoEspecial.textContent;
+            
+            document.getElementById("resultado3").innerHTML = texto;
+        }
+    </script>
+</body>
+</html>
